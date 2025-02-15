@@ -1,0 +1,95 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffe600;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+
+.carrinho-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os produtos quebrem para a próxima linha */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; /* Define um limite máximo para o container */
+    margin: 0 auto; /* Centraliza o container na página */
+}
+
+.produto {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px; /* Largura fixa para cada produto */
+    flex: 1 1 200px; /* Flex-grow, flex-shrink e flex-basis */
+}
+
+.produto img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+button.adicionar {
+    background-color: #3483fa;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button.adicionar:hover {
+    background-color: #2968c8;
+}
+
+.carrinho {
+    background-color: white;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#finalizar {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+#finalizar:hover {
+    background-color: #cc5200;
+}
