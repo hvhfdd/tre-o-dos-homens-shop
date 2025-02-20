@@ -60,62 +60,63 @@
             <button id="finalizar">Finalizar Compra</button>
         </section>
     </main>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            let total = 0;
-            let contadorCarrinho = 0;
-            const totalElemento = document.getElementById("total");
-            const contadorElemento = document.getElementById("contador-carrinho");
-            const listaCarrinho = document.getElementById("lista-carrinho");
-            const botaoFinalizar = document.getElementById("finalizar");
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        let total = 0;
+        let contadorCarrinho = 0;
+        const totalElemento = document.getElementById("total");
+        const contadorElemento = document.getElementById("contador-carrinho");
+        const listaCarrinho = document.getElementById("lista-carrinho");
+        const botaoFinalizar = document.getElementById("finalizar");
 
-            // Adiciona o evento de clique ao ícone do carrinho
-            const iconeCarrinho = document.getElementById("icone-carrinho");
-            const secaoCarrinho = document.getElementById("secao-carrinho");
+        // Adiciona o evento de clique ao ícone do carrinho
+        const iconeCarrinho = document.getElementById("icone-carrinho");
+        const secaoCarrinho = document.getElementById("secao-carrinho");
 
-            iconeCarrinho.addEventListener("click", () => {
-                secaoCarrinho.scrollIntoView({ behavior: "smooth" }); // Rola suavemente até a seção do carrinho
-            });
+        iconeCarrinho.addEventListener("click", () => {
+            secaoCarrinho.scrollIntoView({ behavior: "smooth" }); // Rola suavemente até a seção do carrinho
+        });
 
-            document.querySelectorAll(".adicionar").forEach(botao => {
-                botao.addEventListener("click", () => {
-                    const produto = botao.parentElement;
-                    const nome = produto.querySelector("h2").innerText;
-                    const precoTexto = produto.querySelector(".preco").innerText;
-                    const preco = parseFloat(precoTexto.replace("R$", "").replace(",", "."));
-                    
-                    if (!isNaN(preco)) {
-                        total += preco;
-                        contadorCarrinho++;
-                        atualizarCarrinho(nome, preco);
-                    }
-                });
-            });
-            
-            function atualizarCarrinho(nome, preco) {
-                const li = document.createElement("li");
-                li.innerText = `${nome} - R$ ${preco.toFixed(2)}`;
-                listaCarrinho.appendChild(li);
-                totalElemento.innerText = `R$ ${total.toFixed(2)}`;
-                contadorElemento.innerText = contadorCarrinho;
-            }
-            
-            botaoFinalizar.addEventListener("click", () => {
-                if (contadorCarrinho === 0) {
-                    alert("Seu carrinho está vazio!");
-                    return;
+        document.querySelectorAll(".adicionar").forEach(botao => {
+            botao.addEventListener("click", () => {
+                const produto = botao.parentElement;
+                const nome = produto.querySelector("h2").innerText;
+                const precoTexto = produto.querySelector(".preco").innerText;
+                const preco = parseFloat(precoTexto.replace("R$", "").replace(",", "."));
+
+                if (!isNaN(preco)) {
+                    total += preco;
+                    contadorCarrinho++;
+                    atualizarCarrinho(nome, preco);
                 }
-                let mensagem = "Pedido:\n";
-                document.querySelectorAll("#lista-carrinho li").forEach(item => {
-                    mensagem += `${item.innerText}\n`;
-                });
-                mensagem += `Total: R$ ${total.toFixed(2)}`;
-                
-                const numero = "73981526839";
-                const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-                window.open(link, "_blank");
             });
         });
-    </script>
+
+        function atualizarCarrinho(nome, preco) {
+            const li = document.createElement("li");
+            li.innerText = `${nome} - R$ ${preco.toFixed(2)}`;
+            listaCarrinho.appendChild(li);
+            totalElemento.innerText = `R$ ${total.toFixed(2)}`;
+            contadorElemento.innerText = contadorCarrinho;
+        }
+
+        botaoFinalizar.addEventListener("click", () => {
+            if (contadorCarrinho === 0) {
+                alert("Seu carrinho está vazio!");
+                return;
+            }
+            let mensagem = "Pedido:\n";
+            document.querySelectorAll("#lista-carrinho li").forEach(item => {
+                mensagem += `${item.innerText}\n`;
+            });
+            mensagem += `Total: R$ ${total.toFixed(2)}`;
+
+            const numero = "73981526839";
+            const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+            window.open(link, "_blank");
+        });
+    });
+</script>
+
 </body>
 </html>
