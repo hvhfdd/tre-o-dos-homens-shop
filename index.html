@@ -1,179 +1,106 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Terço dos Homens Eunápolis</title>
-    <style>
-        /* Estilos Gerais */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            background: #007bff;
-            color: white;
-            padding: 20px;
-            margin: 0;
-            text-align: center;
-            font-size: 24px;
-        }
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .produtos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colunas responsivas */
-            gap: 20px;
-            padding: 20px;
-        }
-        .produto {
-            border: 1px solid #ddd;
-            padding: 15px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        .produto:hover {
-            transform: translateY(-5px);
-        }
-        .produto img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .produto h3 {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-        .produto p {
-            font-size: 14px;
-            color: #555;
-        }
-        .produto .preco {
-            font-size: 16px;
-            color: #007bff;
-            font-weight: bold;
-        }
-        .botao {
-            background: #007bff;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 5px;
-            transition: background 0.3s ease;
-        }
-        .botao:hover {
-            background: #0056b3;
-        }
-        .whatsapp-button {
-            background: #25D366;
-        }
-        .whatsapp-button:hover {
-            background: #128C7E;
-        }
-        .carrinho-icon {
-            cursor: pointer;
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #007bff;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        #painel {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-            display: none;
-            width: 90%;
-            max-width: 600px;
-            border-radius: 10px;
-            z-index: 1000;
-        }
-        .admin-produto {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px 0;
-            background: #f9f9f9;
-            border-radius: 5px;
-        }
-        .admin-produto img {
-            max-width: 50px;
-            display: block;
-            margin: 0 auto;
-        }
-        .admin-botoes {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 10px;
-        }
-        /* Estilo da tela de senha */
-        #senha-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1001;
-        }
-        #senha-container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-            text-align: center;
-        }
-        #senha-container input {
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-        }
-        #senha-container button {
-            background: #007bff;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 5px;
-        }
-        #senha-container button:hover {
-            background: #0056b3;
-        }
-    </style>
+    <title>Treço dos Homens Eunápolis Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>Loja Terço dos Homens Eunápolis</h1>
+        <h1>Terço dos Homens Eunápolis Shop</h1>
         <div class="carrinho-icon" id="icone-carrinho">
             🛒 <span id="contador-carrinho">0</span>
         </div>
     </header>
     <main>
-        <section class="container">
-            <div class="produtos-grid" id="produtos"></div>
+        <section class="produtos">
+            <div class="produto"> <img src="img/761fe4d0-a581-4e9d-8d8c-15a64b1c7f69.jpg" alt="Produto 2">
+                <h2>Imagem Santo Antônio gesso 35cm </h2>
+                <p>Imagem boa 100%gesso</p>
+                <p class="preco">R$ 35.00</p>
+                <button class="adicionar">Adicionar ao carrinho</button>
+            </div>
+
+
+   
+            <div class="produto">
+                <img src="img/1e8da561-071e-4cd0-86e4-470b01bf9d5a.jpg" alt="Produto 2">
+                <h2>Imagem Nsa Aparecida cúpula de vidro 25cm</h2>
+                <p>Imagem  De exelente qualidade</p>
+                <p class="preco">R$ 35.00</p>
+                <button class="adicionar">Adicionar ao carrinho</button>
+            </div>
+
+
+
+            
+            <div class="produto">
+                <img src="img/4a8ae2f7-789e-4061-b356-571cb418f251.jpg" alt="Produto 2">
+                <h2>Imagem Nsa da conceição gesso 35cm</h2>
+                <p>Linda imagem para suas Orações</p>
+                <p class="preco">R$ 35.00</p>
+                <button class="adicionar">Adicionar ao carrinho</button>
+            </div>
+
+ <div class="produto">
+                <img src="img/71d2387e-ab28-428c-adde-1a7a05006e2c.jpg" alt="Produto 2">
+                <h2>Imagem São José 25cm</h2>
+                <p>Linda imagem de gesso</p>
+                <p class="preco">R$ 25.00</p>
+                <button class="adicionar">Adicionar ao carrinho</button>
+            </div>
+
+            </div>
+             <div class="produto">
+                <img src="img/a5a92240-441c-4bbc-be28-0d6d468d8c7a.jpg" alt="Produto 2">
+                <h2>Imagem São Padre Pio 25cm</h2>
+                <p>Linda imagem de gesso</p>
+                <p class="preco">R$ 25.00</p>
+                <button class="adicionar">Adicionar ao carrinho</button>
+            </div>
+             <div class="produto">
+                <img src="img/ae52dc76-bde9-4449-9b89-96d0fd868638.jpg"
+            " alt="Produto 2">
+                <h2>Imagem sagrada família</h2>
+                <p> feito a gesso lindo </p>
+                <p class="preco">R$ 25.00</p>
+                <button class="adicionar">Adicionar ao carrinho</button>
+            </div>
+ <div class="produto">
+                <img src="img/7b2f2591-5072-4c4d-a186-7f0cdc1455d0.jpg
+            " alt="Produto 2">
+                <h2>Imagem dupla Bom Jesus e Aparecida cúpula de vidro 25cm</h2>
+                <p>Kit lindo do Bom Jesus e Aparecida</p>
+                <p class="preco">R$ 35.00</p>
+                <button class="adicionar">Adicionar ao carrinho</button>
+            </div>
+ <div class="produto">
+                <img src="img/7b2f2591-5072-4c4d-a186-7f0cdc1455d0.jpg
+            " alt="Produto 2">
+                <h2>Imagem  Bom Jesus cúpula de vidro 25cm</h2>
+                <p>lindo imagem Bom Jesus </p>
+                <p class="preco">R$ 35.00</p>
+                <button class="adicionar">Adicionar ao carrinho</button>
+            </div>
+ <div class="produto">
+                <img src="img/ecaf55e2-3939-4b10-82a2-35bd98f12149.jpg
+            " alt="Produto 2">
+                <h2>Imagem sagrado coração de Jesus gesso 35cm  25cm</h2>
+                <p>indo esclutura Jesus </p>
+                <p class="preco">R$ 35.00</p>
+                <button class="adicionar">Adicionar ao carrinho</button>
+            </div>
+<div class="produto">
+                <img src="img/b45c0538-d63e-4596-b53c-a54ac99d1fc5.jpg
+            " alt="Produto 2">
+                <h2></h2>Imagem do Bom Jesus cúpula de vidro 25cm</h2>
+                <p>indo esclutura Jesus </p>
+                <p class="preco">R$ 35.00</p>
+                <button class="adicionar">Adicionar ao carrinho</button>
+            </div>
         </section>
         <section class="carrinho" id="secao-carrinho">
             <h2>Carrinho</h2>
@@ -182,218 +109,63 @@
             <button id="finalizar">Finalizar Compra</button>
         </section>
     </main>
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        let total = 0;
+        let contadorCarrinho = 0;
+        const totalElemento = document.getElementById("total");
+        const contadorElemento = document.getElementById("contador-carrinho");
+        const listaCarrinho = document.getElementById("lista-carrinho");
+        const botaoFinalizar = document.getElementById("finalizar");
 
-    <!-- Painel de Administração -->
-    <button class="botao" onclick="mostrarSenha()">Acessar Painel</button>
-    <div id="painel">
-        <h2>Painel de Administração</h2>
-        <div id="admin-lista-produtos"></div>
-        <hr>
-        <h3>Adicionar Novo Produto</h3>
-        <input type="text" id="nome" placeholder="Nome do produto"><br>
-        <input type="number" id="preco" placeholder="Preço"><br>
-        <input type="file" id="imagem" accept="image/*"><br>
-        <button class="botao" onclick="adicionarProduto()">Adicionar Produto</button>
-        <button class="botao" onclick="fecharPainel()">Fechar</button>
-        <hr>
-        <h3>Alterar Senha</h3>
-        <input type="password" id="nova-senha" placeholder="Nova Senha"><br>
-        <button class="botao" onclick="alterarSenha()">Alterar Senha</button>
-        <hr>
-        <h3>Reiniciar Banco de Dados</h3>
-        <button class="botao" onclick="reiniciarBancoDeDados()">Reiniciar Tudo</button>
-    </div>
+        // Adiciona o evento de clique ao ícone do carrinho
+        const iconeCarrinho = document.getElementById("icone-carrinho");
+        const secaoCarrinho = document.getElementById("secao-carrinho");
 
-    <!-- Tela de Senha -->
-    <div id="senha-overlay">
-        <div id="senha-container">
-            <h2>Acesso ao Painel</h2>
-            <input type="password" id="senha-input" placeholder="Digite a senha">
-            <button onclick="verificarSenha()">Entrar</button>
-        </div>
-    </div>
+        iconeCarrinho.addEventListener("click", () => {
+            secaoCarrinho.scrollIntoView({ behavior: "smooth" }); // Rola suavemente até a seção do carrinho
+        });
 
-    <script>
-        // Senha do admin (pode ser alterada)
-        let senhaAdmin = "joao2909";
+        document.querySelectorAll(".adicionar").forEach(botao => {
+            botao.addEventListener("click", () => {
+                const produto = botao.parentElement;
+                const nome = produto.querySelector("h2").innerText;
+                const precoTexto = produto.querySelector(".preco").innerText;
+                const preco = parseFloat(precoTexto.replace("R$", "").replace(",", "."));
 
-        // Função para mostrar a tela de senha
-        function mostrarSenha() {
-            document.getElementById("senha-overlay").style.display = "flex";
-        }
-
-        // Função para verificar a senha
-        function verificarSenha() {
-            let senha = document.getElementById("senha-input").value;
-            if (senha === senhaAdmin) {
-                document.getElementById("senha-overlay").style.display = "none";
-                document.getElementById("painel").style.display = "block";
-            } else {
-                alert("Senha incorreta!");
-            }
-        }
-
-        // Funções do Painel de Administração
-        function fecharPainel() {
-            document.getElementById("painel").style.display = "none";
-            limparCampos(); // Limpa os campos ao fechar o painel
-        }
-
-        function limparCampos() {
-            document.getElementById("nome").value = "";
-            document.getElementById("preco").value = "";
-            document.getElementById("imagem").value = "";
-        }
-
-        function alterarSenha() {
-            const novaSenha = document.getElementById("nova-senha").value;
-            if (novaSenha) {
-                senhaAdmin = novaSenha;
-                alert("Senha alterada com sucesso!");
-            } else {
-                alert("Digite uma nova senha!");
-            }
-        }
-
-        function reiniciarBancoDeDados() {
-            if (confirm("Tem certeza que deseja reiniciar o banco de dados? Isso apagará todos os produtos!")) {
-                localStorage.removeItem("produtos"); // Remove todos os produtos do localStorage
-                alert("Banco de dados reiniciado com sucesso!");
-                location.reload(); // Recarrega a página para refletir as mudanças
-            }
-        }
-
-        function adicionarProduto() {
-            let nome = document.getElementById("nome").value;
-            let preco = document.getElementById("preco").value;
-            let imagemInput = document.getElementById("imagem");
-            if (nome && preco && imagemInput.files.length > 0) {
-                let reader = new FileReader();
-                reader.onload = function(event) {
-                    let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
-                    produtos.push({ nome, preco, imagem: event.target.result });
-                    localStorage.setItem("produtos", JSON.stringify(produtos));
-                    carregarProdutos();
-                    carregarProdutosAdmin();
-                    limparCampos(); // Limpa os campos após adicionar o produto
-                    fecharPainel();
-                };
-                reader.readAsDataURL(imagemInput.files[0]);
-            }
-        }
-
-        function carregarProdutos() {
-            let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
-            let divProdutos = document.getElementById("produtos");
-            divProdutos.innerHTML = "";
-            produtos.forEach((produto, index) => {
-                let div = document.createElement("div");
-                div.classList.add("produto");
-                div.innerHTML = `
-                    <img src="${produto.imagem}" alt="${produto.nome}">
-                    <h3>${produto.nome}</h3>
-                    <p class="preco">Preço: R$ ${produto.preco}</p>
-                    <button class="botao whatsapp-button" onclick="comprarViaWhatsapp('${produto.nome}', ${produto.preco})">Comprar via WhatsApp</button>
-                    <button class="botao" onclick="adicionarAoCarrinho('${produto.nome}', ${produto.preco})">Adicionar ao Carrinho</button>
-                `;
-                divProdutos.appendChild(div);
+                if (!isNaN(preco)) {
+                    total += preco;
+                    contadorCarrinho++;
+                    atualizarCarrinho(nome, preco);
+                }
             });
+        });
+
+        function atualizarCarrinho(nome, preco) {
+            const li = document.createElement("li");
+            li.innerText = `${nome} - R$ ${preco.toFixed(2)}`;
+            listaCarrinho.appendChild(li);
+            totalElemento.innerText = `R$ ${total.toFixed(2)}`;
+            contadorElemento.innerText = contadorCarrinho;
         }
 
-        function carregarProdutosAdmin() {
-            let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
-            let divAdminProdutos = document.getElementById("admin-lista-produtos");
-            divAdminProdutos.innerHTML = "";
-            produtos.forEach((produto, index) => {
-                let div = document.createElement("div");
-                div.classList.add("admin-produto");
-                div.innerHTML = `
-                    <img src="${produto.imagem}" alt="${produto.nome}">
-                    <h3>${produto.nome}</h3>
-                    <p>Preço: R$ ${produto.preco}</p>
-                    <div class="admin-botoes">
-                        <button class="botao" onclick="editarProduto(${index})">Editar</button>
-                        <button class="botao" onclick="removerProduto(${index})">Remover</button>
-                    </div>
-                `;
-                divAdminProdutos.appendChild(div);
-            });
-        }
-
-        function editarProduto(index) {
-            let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
-            let produto = produtos[index];
-            let novoNome = prompt("Editar nome:", produto.nome);
-            let novoPreco = prompt("Editar preço:", produto.preco);
-            if (novoNome && novoPreco) {
-                produtos[index].nome = novoNome;
-                produtos[index].preco = novoPreco;
-                localStorage.setItem("produtos", JSON.stringify(produtos));
-                carregarProdutos();
-                carregarProdutosAdmin();
-            }
-        }
-
-        function removerProduto(index) {
-            let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
-            produtos.splice(index, 1);
-            localStorage.setItem("produtos", JSON.stringify(produtos));
-            carregarProdutos();
-            carregarProdutosAdmin();
-        }
-
-        // Função para comprar via WhatsApp
-        function comprarViaWhatsapp(nome, preco) {
-            const numero = "73981320907";
-            const mensagem = `Olá, gostaria de comprar o produto: ${nome} no valor de R$ ${preco}.`;
-            const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-            window.open(link, "_blank");
-        }
-
-        // Carrinho de Compras
-        let carrinho = [];
-        let totalCarrinho = 0;
-
-        function adicionarAoCarrinho(nome, preco) {
-            carrinho.push({ nome, preco });
-            totalCarrinho += parseFloat(preco);
-            atualizarCarrinho();
-        }
-
-        function atualizarCarrinho() {
-            const listaCarrinho = document.getElementById("lista-carrinho");
-            const totalElemento = document.getElementById("total");
-            const contadorElemento = document.getElementById("contador-carrinho");
-
-            listaCarrinho.innerHTML = "";
-            carrinho.forEach(item => {
-                const li = document.createElement("li");
-                li.innerText = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
-                listaCarrinho.appendChild(li);
-            });
-
-            totalElemento.innerText = `R$ ${totalCarrinho.toFixed(2)}`;
-            contadorElemento.innerText = carrinho.length;
-        }
-
-        document.getElementById("finalizar").addEventListener("click", () => {
-            if (carrinho.length === 0) {
+        botaoFinalizar.addEventListener("click", () => {
+            if (contadorCarrinho === 0) {
                 alert("Seu carrinho está vazio!");
                 return;
             }
             let mensagem = "Pedido:\n";
-            carrinho.forEach(item => {
-                mensagem += `${item.nome} - R$ ${item.preco.toFixed(2)}\n`;
+            document.querySelectorAll("#lista-carrinho li").forEach(item => {
+                mensagem += `${item.innerText}\n`;
             });
-            mensagem += `Total: R$ ${totalCarrinho.toFixed(2)}`;
+            mensagem += `Total: R$ ${total.toFixed(2)}`;
 
             const numero = "73981320907";
             const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
             window.open(link, "_blank");
         });
+    });
+</script>
 
-        // Carregar produtos ao iniciar a página
-        carregarProdutos();
-    </script>
 </body>
 </html>
